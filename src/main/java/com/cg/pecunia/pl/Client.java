@@ -29,6 +29,7 @@ public class Client {
 				debitUsingChequeInfo();
 				break;
 			case 3:
+				System.out.println("THANK YOU!!");
 				System.exit(0);
 				break;
 			default:
