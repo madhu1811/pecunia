@@ -1,37 +1,58 @@
 package com.cg.pecunia.bean;
 
-public class Transaction extends Account {
-	private long ts_no;
-	private long acc_no;
-	private long date_name;
-	public Transaction(String acc_Name, int contact, long acc_No, String address, double balance, long ts_no,
-			long acc_no2, long date_name) {
-		super(acc_Name, contact, acc_No, address, balance);
-		this.ts_no = ts_no;
-		acc_no = acc_no2;
-		this.date_name = date_name;
-	}
-	public Transaction(String acc_Name, int contact, long acc_No, String address, double balance) {
-		super(acc_Name, contact, acc_No, address, balance);
-	}
-	public long getTs_no() {
-		return ts_no;
-	}
-	public void setTs_no(long ts_no) {
-		this.ts_no = ts_no;
-	}
-	public long getAcc_no() {
-		return acc_no;
-	}
-	public void setAcc_no(long acc_no) {
-		this.acc_no = acc_no;
-	}
-	public long getDate_name() {
-		return date_name;
-	}
-	public void setDate_name(long date_name) {
-		this.date_name = date_name;
-	}
-	
+import java.time.LocalDate;
 
+public class Transaction {
+private long transactionID;
+private LocalDate transactionDate;
+
+public Transaction(long transactionID, LocalDate transactionDate) {
+	super();
+	this.transactionID = transactionID;
+	this.transactionDate = transactionDate;
 }
+
+public Transaction() {
+	super();
+}
+
+public long getTransactionID() {
+	return transactionID;
+}
+public void setTransactionID(long transactionID) {
+	this.transactionID = transactionID;
+}
+public LocalDate getTransactionDate() {
+	return transactionDate;
+}
+public void setTransactionDate(LocalDate transactionDate) {
+	this.transactionDate = transactionDate;
+}
+public boolean equals(Object obj)
+{
+	if(this==obj)
+	return true;
+	if(obj==null)
+		return false;
+	if(getClass()!=obj.getClass())
+		return false;
+	Transaction trans=(Transaction)obj;
+	if(transactionDate==null)
+	{
+		if(trans.transactionDate!=null)
+			return false;
+		else if(!transactionDate.equals(trans.transactionDate))
+			return false;
+		if(transactionID!=trans.transactionID)
+			return false;
+		
+	}
+	return true;
+}
+	public String toString()
+	{
+		return "Transaction[transactionID=" + transactionID + ", transactionDate="  + transactionDate+"]";
+	}
+}
+
+
