@@ -17,9 +17,9 @@ public class TransactionUsingChequeDAOImpl implements TransactionUsingChequeDAO 
 		addSomeAccountDetails1();
 	}
 	public void addSomeAccountDetails1(){
-		TransactionModel t1=new TransactionModel("123456789012","Rebeca",3000,
+		TransactionModel t1=new TransactionModel("123456789012","Madhurima",23000,
 				Arrays.asList(new Transaction(100000000001L,LocalDate.now())));
-		TransactionModel t2=new TransactionModel("123456789013","Prameela",4000,
+		TransactionModel t2=new TransactionModel("123456789013","Srujana",24000,
 				Arrays.asList(new Transaction(100000000002L,LocalDate.now())));
 		transactionModel.put(t1.getAccountNumber(),t1);
 		transactionModel.put(t2.getAccountNumber(),t2);
