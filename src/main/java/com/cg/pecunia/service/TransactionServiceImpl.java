@@ -1,5 +1,5 @@
 package com.cg.pecunia.service;
-import java.util.Date;
+import java.sql.Date;
 
 import com.cg.pecunia.bean.Transaction;
 import com.cg.pecunia.dao.TransactionUsingChequeDAO;

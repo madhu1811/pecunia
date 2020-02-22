@@ -1,0 +1,6 @@
+projectKey=com.cg:pecunia
+serverUrl=http://localhost:9000
+serverVersion=6.5.0.27846
+dashboardUrl=http://localhost:9000/dashboard/index/com.cg:pecunia
+ceTaskId=AXBrPzRxphF5b9bFlAlZ
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXBrPzRxphF5b9bFlAlZ

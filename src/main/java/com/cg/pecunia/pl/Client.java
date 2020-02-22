@@ -70,7 +70,7 @@ public class Client {
 		 String chequeNumber=in.next();
 		 System.out.println("Enter  cheque IFSC code");
 		 String chequeIFSC=in.next();
-		 System.out.println("Enter amount to be credited");
+		 System.out.println("Enter amount to be debited");
 		 int amount=in.nextInt();
 		 System.out.println("Enter Bank name");
 		 String chequeBankName=in.next();
