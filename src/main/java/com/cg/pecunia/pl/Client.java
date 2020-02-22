@@ -17,9 +17,9 @@ public class Client {
 		for(;;){
 			int choice;
 			System.out.println("Enter your choice");
-			System.out.println("1-Credit Using Cheque");
-			System.out.println("2-Debit Using Cheque");
-			System.out.println("3-Exit");
+			System.out.println("1.Credit Using Cheque");
+			System.out.println("2.Debit Using Cheque");
+			System.out.println("3.Exit");
 			choice=in.nextInt();
 			switch(choice){
 			case 1:
