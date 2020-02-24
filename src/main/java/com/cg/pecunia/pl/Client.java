@@ -10,7 +10,7 @@ import com.cg.pecunia.dao.TransactionUsingChequeDAOImpl;
 
 public class Client {
 	static TransactionUsingChequeDAO transactionService=new TransactionUsingChequeDAOImpl();
-	static Scanner in =new Scanner(System.in);
+	static Scanner scanner =new Scanner(System.in);
 
 	public static void main(String[] args) throws ParseException {
 	
@@ -20,7 +20,7 @@ public class Client {
 			System.out.println("1.Credit Using Cheque");
 			System.out.println("2.Debit Using Cheque");
 			System.out.println("3.Exit");
-			choice=in.nextInt();
+			choice=scanner.nextInt();
 			switch(choice){
 			case 1:
 				creditUsingChequeInfo();
@@ -41,19 +41,19 @@ public class Client {
 	}
  	private static void creditUsingChequeInfo() throws ParseException {
 		 System.out.println("Enter payeeAccountNumber ");
-		 String payeeAccountNumber = in.next();
+		 String payeeAccountNumber = scanner.next();
 		 System.out.println("Enter account number");
-		 String accountNumber=in.next();;
+		 String accountNumber=scanner.next();;
 		 System.out.println("Enter cheque number");
-		 String chequeNumber=in.next();
+		 String chequeNumber=scanner.next();
 		 System.out.println("Enter  cheque IFSC code");
-		 String chequeIFSC=in.next();
+		 String chequeIFSC=scanner.next();
 		 System.out.println("Enter amount to be credited");
-		 int amount=in.nextInt();
+		 int amount=scanner.nextInt();
 		 System.out.println("Enter Bank name");
-		 String chequeBankName=in.next();
+		 String chequeBankName=scanner.next();
 		 System.out.println("Enter Date");
-		 String date=in.next();
+		 String date=scanner.next();
 		 Date chequeIssueDate=new SimpleDateFormat("dd-MM-yyyy").parse(date);
 
 		 if(transactionService.creditUsingCheque(accountNumber,payeeAccountNumber, chequeNumber, chequeBankName, chequeIFSC, chequeIssueDate, amount)){
@@ -63,19 +63,19 @@ public class Client {
 	}
  	private static void debitUsingChequeInfo() throws ParseException {
 		 System.out.println("Enter payeeAccountNumber ");
-		 String payeeAccountNumber = in.next();
+		 String payeeAccountNumber = scanner.next();
 		 System.out.println("Enter account number");
-		 String accountNumber=in.next();
+		 String accountNumber=scanner.next();
 		 System.out.println("Enter cheque number");
-		 String chequeNumber=in.next();
+		 String chequeNumber=scanner.next();
 		 System.out.println("Enter  cheque IFSC code");
-		 String chequeIFSC=in.next();
+		 String chequeIFSC=scanner.next();
 		 System.out.println("Enter amount to be debited");
-		 int amount=in.nextInt();
+		 int amount=scanner.nextInt();
 		 System.out.println("Enter Bank name");
-		 String chequeBankName=in.next();
+		 String chequeBankName=scanner.next();
 		 System.out.println("Enter Date");
-		 String date=in.next()+in.nextLine();
+		 String date=scanner.next()+scanner.nextLine();
 		 Date chequeIssueDate=new SimpleDateFormat("dd-mm-yyyy").parse(date);
 		 
 	

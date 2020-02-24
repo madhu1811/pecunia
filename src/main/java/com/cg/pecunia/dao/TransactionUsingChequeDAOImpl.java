@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 import com.cg.pecunia.bean.Transaction;
 import com.cg.pecunia.bean.TransactionModel;
-import com.cg.pecunia.exception.amountLessException;
+import com.cg.pecunia.exception.AmountLessException;
 
 public class TransactionUsingChequeDAOImpl implements TransactionUsingChequeDAO {
 	Map<String,TransactionModel> transactionModel=new HashMap<String,TransactionModel>();
@@ -76,7 +76,7 @@ public class TransactionUsingChequeDAOImpl implements TransactionUsingChequeDAO 
 		
 		try{
 			if(amount<=100 || amount>=100000){
-				throw new amountLessException("insufficient");
+				throw new AmountLessException("insufficient");
 			}
 			else if(payeeAccountNumber.length()!=12){
 					throw new Exception("Invalid payee account number");
@@ -120,7 +120,7 @@ public class TransactionUsingChequeDAOImpl implements TransactionUsingChequeDAO 
 			String chequeBankName, String chequeIFSC, Date chequeIssueDate, int amount) {
 		try{
 			if(amount<=100 && amount>=100000){
-				throw new amountLessException("insufficient");
+				throw new AmountLessException("insufficient");
 			}
 			else if(payeeAccountNumber.length()!=12){
 				throw new Exception("Invalid payee account number");
